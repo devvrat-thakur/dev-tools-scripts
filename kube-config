@@ -1,0 +1,24 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRFNU1EUXhPREEzTlRFek5Wb1hEVEk1TURReE5UQTNOVEV6TlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBS2EyCjIxSGZrcmJNZnBKUzdMKzVER1owbE1OSFo3enJvd0Q2T05jNEJMdUhFZHl2WExkRzlURFZqb21RejJiU28yRzMKbmR6TitrbjFDd3dhRXJicG9DcGZxNDFrbStEMTBwNnN5Mm9ZZWVvRmt4cVJtaWZmNFJESmNTVGNlelJER1cvRAppQ1grZVdTY2grK1djelNYNGNRTElSRFoxVGNFb1RTYzUweitIMnJCYW5Hdml4QnhmZjgzWFJsRSsrNHptY1QvCk1MT3JJSU5iZjdIUWFrVXFGVFNuUllJQ05mM3BqY0IvSUdJVmtEN2Z3M1ZwRUpldmd1UlpEcDg5YlZXVlRJWFIKb2NkTGJ3azBmR1Y4bGNZblhRQXVuSHBKNzk3N1pvbHBYN0ViTUEremZLSWV6V2R1QUdSVTdHSW5LcURaVy9SYgpLQ3Q1ZWVUSjZxTFJsN1UyMmtVQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFBN2RNU3VHVmpzZ0g2SlpRdEpiU2hGTXFZTXUKT0JtM1dvN2lDWWE5THgxNDhlVmxZdHdKS1RlOU0zQWlVeVNZMjN1cGZsRG5rbFlQdFJWNXVlTjNrWVloVDNYMgpPTTNTUmgvK0JnYUxBWk84aWRTRURBVkxkUS8wUWRGNmRCd0FuL2tzODFKVHd3Qkp5VUhtRzJERXRlY1dHd0tHCkJZUEtuMGFaVjVMbGFEblhURmtiWHBMN0swQWNMeENMSTRFK21GM1FZVWxXMlhIaUEyUlVPb2dFSHhxOGlCQVMKY2ZWMXAybVRGUUpGd0tWOTk5ek1MVG5WRWxNc0U2anlUWW5JSllkbDBucld6Y2N4QnhQVWREaXNuc1M1MllueQo5R1JLSG1wN2dKdkZqUlNXaWVJaVl3WnZpei81cGdJbUtrQzBjWSsvVmpnam5wQ1NRcUlIRTh1azhBYz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://64B2E9A137D03C1CF64F276569333BEC.yl4.ap-south-1.eks.amazonaws.com
+  name: arn:aws:eks:ap-south-1:802265616314:cluster/demo-cars24-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-south-1:802265616314:cluster/demo-cars24-cluster
+    user: arn:aws:eks:ap-south-1:802265616314:cluster/demo-cars24-cluster
+  name: arn:aws:eks:ap-south-1:802265616314:cluster/demo-cars24-cluster
+current-context: arn:aws:eks:ap-south-1:802265616314:cluster/demo-cars24-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-south-1:802265616314:cluster/demo-cars24-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - token
+      - -i
+      - demo-cars24-cluster
+      command: aws-iam-authenticator
